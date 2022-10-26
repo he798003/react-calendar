@@ -1,0 +1,24 @@
+@use '../../scss/index' as *;
+
+.calendar {
+  width: 100%;
+  height: 100%;
+  @include flex(center, flex-start);
+  table {
+    width: 100%;
+    th {
+      background-color: $main-color;
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.2rem;
+      line-height: 50px;
+    }
+    tbody {
+      height: 100px;
+      text-align: center;
+      td {
+        line-height: 50px;
+      }
+    }
+  }
+}

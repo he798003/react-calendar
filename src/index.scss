@@ -1,0 +1,16 @@
+@use './scss/index' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+#root {
+  width: 100%;
+}
+body {
+  height: 100vh;
+  @include flex(center, center);
+  flex-direction: column;
+}

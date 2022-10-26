@@ -1,0 +1,67 @@
+@use '../../scss/index' as *;
+
+.mainDate {
+  width: 100%;
+  text-align: center;
+}
+
+.calendar {
+  margin: 30px;
+}
+.weekDayHead {
+  border-bottom: 1px solid #ddd;
+}
+.weekDay {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.weekDay,
+.col {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.weekDay > div {
+  flex: 1 1 0%;
+  line-height: 30px;
+}
+.col {
+  border-right: 1px solid #ddd;
+}
+.col > div {
+  position: relative;
+  flex: 1 1;
+  height: 90px;
+  line-height: 30px;
+  border-left: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.col > .day.other {
+  background-color: #999;
+}
+
+.col > .day.dateNow {
+  background-color: $main-color;
+  color: #fff;
+}
+.yearRow:hover {
+  background-color: $main-color;
+  color: #fff;
+  cursor: pointer;
+}
+
+// .week > div::before {
+//   position: absolute;
+//   content: attr(data-date);
+//   // content: '31';
+//   top: 0;
+//   right: 0;
+//   display: block;
+//   width: 30px;
+//   border-left: 1px solid #ddd;
+//   border-bottom: 1px solid #ddd;
+// }

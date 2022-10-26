@@ -1,0 +1,33 @@
+@use '../../scss/index' as *;
+
+.main {
+  width: 100%;
+  height: 100px;
+  .header {
+    @include flex(center, center);
+    width: 100%;
+    height: 100%;
+    .month,
+    .year {
+      @include flex(center, center);
+      width: 50%;
+      > h1 {
+        cursor: pointer;
+      }
+      .selectBtn {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+    h1 {
+      display: block;
+      margin: 1rem;
+      text-align: center;
+      // 禁止反藍
+      -webkit-user-select: none;
+    }
+  }
+  select {
+    -webkit-user-select: none;
+  }
+}
